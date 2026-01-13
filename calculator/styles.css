@@ -1,42 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 * {
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
   margin: 0;
   height: 100vh;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Orbitron', sans-serif;
 }
 
 .calculator {
-  background: #fff;
+  background: #000;
+  border: 2px solid #39FF14;
+  box-shadow: 0 0 25px #39FF14;
+  border-radius: 18px;
   padding: 20px;
-  border-radius: 16px;
   width: 100%;
   max-width: 360px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 #display {
   width: 100%;
-  height: 60px;
+  height: 65px;
+  background: #000;
+  border: 1px solid #39FF14;
+  color: #39FF14;
   font-size: 28px;
   text-align: right;
   padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background: #f3f3f3;
-  margin-bottom: 15px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: inset 0 0 10px #39FF14;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  gap: 14px;
 }
 
 button {
@@ -45,26 +50,33 @@ button {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  background: #e0e0e0;
-  transition: 0.2s;
+  background: #2a2a2a;
+  color: #fff;
+  transition: 0.2s ease;
 }
 
 button:hover {
-  background: #d4d4d4;
+  box-shadow: 0 0 10px #39FF14;
 }
 
 .operator {
-  background: #ff9f43;
-  color: white;
+  background: #39FF14;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 0 12px #39FF14;
 }
 
 .equal {
-  background: #10ac84;
-  color: white;
+  background: #39FF14;
+  color: #000;
+  font-size: 26px;
+  font-weight: bold;
   grid-row: span 2;
+  box-shadow: 0 0 25px #39FF14;
 }
 
 .zero {
   grid-column: span 2;
 }
+
 
