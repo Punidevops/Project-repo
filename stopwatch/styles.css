@@ -1,0 +1,100 @@
+:root {
+  --neon-red: #ff1744;
+  --dark-bg: #000;
+  --card-bg: #0a0a0a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+  background: url('bg-tech.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* CARD */
+.stopwatch-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 0 30px var(--neon-red);
+  border: 2px solid var(--neon-red);
+}
+
+/* TITLE */
+h1 {
+  color: var(--neon-red);
+  margin-bottom: 20px;
+}
+
+/* DISPLAY */
+#display {
+  font-size: 2.5rem;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: black;
+  border-radius: 10px;
+  box-shadow: inset 0 0 15px var(--neon-red);
+  color: var(--neon-red);
+}
+
+/* BUTTONS */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--neon-red);
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--neon-red);
+  color: black;
+}
+
+#startStop.active {
+  background: var(--neon-red);
+  color: black;
+}
+
+/* HISTORY */
+.history h2 {
+  margin-bottom: 10px;
+  color: var(--neon-red);
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  background: black;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px var(--neon-red);
+  font-size: 0.9rem;
+}
+
