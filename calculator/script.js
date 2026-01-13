@@ -1,41 +1,18 @@
-let currentInput = '';
-let history = [];
+let display = document.getElementById("display");
 
-function appendNumber(number) {
-    currentInput += number;
-    updateDisplay();
+function append(value) {
+  display.value += value;
 }
 
 function clearDisplay() {
-    currentInput = '';
-    updateDisplay();
-}
-
-function updateDisplay() {
-    document.getElementById('display').innerText = currentInput || '0';
+  display.value = "";
 }
 
 function calculate() {
-    try {
-        const result = eval(currentInput);
-        history.unshift(currentInput + ' = ' + result);
-        if (history.length > 5) {
-            history.pop();
-        }
-        currentInput = result.toString();
-        updateDisplay();
-        updateHistory();
-    } catch (e) {
-        updateDisplay();
-        alert('Invalid Input');
-    }
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
 }
-
-function updateHistory() {
-    const historyDiv = document.getElementById('history');
-    historyDiv.innerHTML = history.map(item => `<div>${item}</div>`).join('');
-}
-
-// Initialize display
-updateDisplay();
 
